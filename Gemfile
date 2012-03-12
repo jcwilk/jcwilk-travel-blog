@@ -5,7 +5,6 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -54,5 +53,11 @@ gem 'heroku'
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
 
-# Postgres support (added for Heroku)
-gem 'pg'
+group :development do
+  gem 'sqlite3'
+end
+  
+group :production do
+  # Postgres support (added for Heroku)
+  gem 'pg'
+end
