@@ -89,3 +89,5 @@ capybara-*html
 .rvmrc
 .rvmrc.*
 
+#precompiled stuff
+*.gz

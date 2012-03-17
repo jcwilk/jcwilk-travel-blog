@@ -1,0 +1,9 @@
+<%= render(:partial => "/refinery/menu", :locals => {
+		:dom_id => 'menu',
+		:css => 'menu'
+	}) %>
+<header id="inner_header">
+	<h1 id='logo'>
+		<%= link_to Refinery::Core.site_name, refinery.root_path %>
+	</h1>
+</header>

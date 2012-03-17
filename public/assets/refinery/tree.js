@@ -1,1 +1,25 @@
-$(function(){$(".tree .toggle").live("click",function(a){a.preventDefault();var b=$(this).parents("li:first"),c=b.find(".icon.toggle"),d=b.find(".nested");if(c.hasClass("expanded"))c.removeClass("expanded"),d.slideUp();else{var e=d.attr("data-ajax-content");b.addClass("loading"),d.load(e,function(){d.find("li:last").addClass("branch_end"),c.addClass("expanded"),init_tooltips(),d.slideDown(),b.removeClass("loading")})}})});
+$(function() {
+  $('.tree .toggle').live('click', function(e) { 
+    e.preventDefault(); 
+    var $li   = $(this).parents('li:first');
+    var $icon = $li.find('.icon.toggle');
+    var $nested = $li.find('.nested');
+
+    if ($icon.hasClass('expanded')) {
+      $icon.removeClass('expanded');
+      $nested.slideUp(); 
+    }
+    else {
+      var contentUrl = $nested.attr('data-ajax-content');
+      $li.addClass('loading');
+      
+      $nested.load(contentUrl, function() {
+        $nested.find('li:last').addClass('branch_end');
+        $icon.addClass('expanded');
+        init_tooltips();
+        $nested.slideDown(); 
+        $li.removeClass('loading');
+      });
+    }
+  });
+});
