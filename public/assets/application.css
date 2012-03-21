@@ -205,14 +205,14 @@ section#body_content
 	line-height: 24px;
 }
 
-section#body_content_left
+section#body_content_left, section#body
 {
 	float: left;
 	width: 560px;
 	padding: 20px;
 }
 
-section#body_content_right
+section#body_content_right, section#side_body
 {
 	float: left;
 	width: 300px;
@@ -273,7 +273,6 @@ section#templatecopy
 	line-height: 22px;
 	text-align: right;
 	font-size: 12px;
-	border-top: 1px dotted #333;
 }
 
 section#templatecopy a
